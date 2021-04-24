@@ -5,6 +5,9 @@
         <sidebar-link to="/dashboard" :name="$t('sidebar.dashboard')" icon="tim-icons icon-chart-pie-36"/>
         <sidebar-link to="/student-profile" :name="$t('sidebar.student-profile')" icon="tim-icons icon-badge"/>
         <sidebar-link to="/post-lessons-payments" :name="$t('sidebar.post-lessons-payments')" icon="tim-icons icon-credit-card"/>
+        <sidebar-link to="/manage-students" :name="$t('sidebar.manage-students')" icon="tim-icons icon-bullet-list-67"/>
+        <sidebar-link to="/manage-payments" :name="$t('sidebar.manage-payments')" icon="tim-icons icon-notes"/>
+        <sidebar-link to="/manage-lessons" :name="$t('sidebar.manage-lessons')" icon="tim-icons icon-paper"/>
         <sidebar-link to="/profile" :name="$t('sidebar.userProfile')" icon="tim-icons icon-single-02"/>
         <!-- <sidebar-link to="/icons" :name="$t('sidebar.icons')" icon="tim-icons icon-atom"/>
         <sidebar-link to="/maps" :name="$t('sidebar.maps')" icon="tim-icons icon-pin"/>

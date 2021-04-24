@@ -15,6 +15,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import RouterPrefetch from 'vue-router-prefetch'
 import App from "./App";
+import store from './store';
 // TIP: change to import router from "./router/starterRouter"; to start with a clean layout
 import router from "./router/index";
 
@@ -27,6 +28,7 @@ Vue.use(RouterPrefetch);
 
 /* eslint-disable no-new */
 new Vue({
+  store,
   router,
   i18n,
   render: h => h(App)

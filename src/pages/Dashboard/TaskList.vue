@@ -1,32 +1,48 @@
 <template>
     <base-table :data="tableData"
-                thead-classes="text-primary">
+                thead-classes="text-primary"
+                >
       <template slot-scope="{row}">
-        <td>
+        <!-- <td>
           <base-checkbox v-model="row.done">
           </base-checkbox>
-        </td>
+        </td> -->
         <td>
           <p class="title">{{row.title}}</p>
-          <p class="text-muted">{{row.description}}</p>
-        </td>
-        <td class="td-actions text-right">
-          <base-button type="link" aria-label="edit button">
-            <i class="tim-icons icon-pencil"></i>
-          </base-button>
+          <paragraph-container :paragraphText=row.description
+                                @edit-finished="$emit('edit-finished', $event, row.title)"
+                                ></paragraph-container>
+          <!-- <text-line :text=row.description></text-line> -->
         </td>
       </template>
     </base-table>
 </template>
 <script>
   import {BaseTable} from '@/components'
+  import TextLine from './TextLine'
+  import EditLine from './EditLine'
+  import ParagraphContainer from './ParagraphContainer'
+
   export default {
     components: {
-      BaseTable
+      BaseTable,
+      TextLine,
+      EditLine,
+      ParagraphContainer
     },
     computed: {
       tableData() {
-        return this.$t('dashboard.taskList');
+        return this.$t('dashboard.manageInfo');
+      }
+    },
+    methods: {
+      changeToEdit() {
+        this.currentTab = 'EditLine';
+      }
+    },
+    data() {
+      return {
+        currentTab: 'TextLine'
       }
     }
   }

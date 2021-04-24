@@ -1,19 +1,19 @@
 <template>
   <card>
-    <h5 slot="header" class="title">Add Lesson</h5>
+    <h5 slot="header" class="title">Manage Student</h5>
     <div class="row">
       <div class="col-md-6 pr-md-1">
         <base-input label="First Name"
                   v-model="model.firstName"
                   placeholder="First Name"
-                  disabled>
+                  >
         </base-input>
       </div>
       <div class="col-md-6 pl-md-1">
         <base-input label="Last Name"
                   v-model="model.lastName"
                   placeholder="Last Name"
-                  disabled>
+                  >
         </base-input>
       </div>
     </div>
@@ -23,7 +23,7 @@
         <datepicker input-class="form-control"
                     calendar-class="calendar"
                     typeable="true"
-                    monday-first=true
+                    monday-first="true"
                     placeholder="Enter Date"
                     v-model="model.lessonDate">
                     </datepicker>

@@ -225,7 +225,7 @@
     methods: {
 
       totalPaymentsThisMonth() {
-        return this.bigLineChart.allData[0][9]//new Date().getMonth()];
+        return this.bigLineChart.allData[0][new Date().getMonth()];
       },
 
       totalLessonsThisMonth() {
@@ -297,7 +297,7 @@
         
         const paymentsList = await this.fetchAllPayments();
         const studentList = await this.fetchAllStudents();
-        let currentMonth = 10; //new Date().getMonth() + 1;
+        let currentMonth = new Date().getMonth() + 1;
 
         let currentMonthPayments = paymentsList.payments.filter(payment => payment.date.split('-')[1] == currentMonth);
 
@@ -321,7 +321,7 @@
       async fetchCurrentMonthAttendance() {
         const lessonsList = await this.fetchAllLessons();
         const studentList = await this.fetchAllStudents();
-        let currentMonth = 10;//new Date().getMonth() + 1;
+        let currentMonth = new Date().getMonth() + 1;
 
         let currentMonthLessons = lessonsList.lessons.filter(lesson => lesson.date.split('-')[1] == currentMonth);
 

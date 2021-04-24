@@ -1,5 +1,5 @@
 <template>
-  <div>Please fill the date field correctly.</div>
+  <div>Please fill the payment date field correctly.</div>
 </template>
 
 <script>
