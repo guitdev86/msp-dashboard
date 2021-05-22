@@ -6,9 +6,6 @@
         <base-button slot="footer" type="primary" fill @click="saveChangesToDb"
           >Save</base-button
         >
-        <base-button class="ml-2" slot="footer" type="primary" fill
-          >Delete</base-button
-        >
       </div>
     </div>
     <div class="col-md-4">
