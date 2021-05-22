@@ -72,7 +72,7 @@ export default {
     },
 
     deletePaymentById(id) {
-      //this.deletePayment(id);
+      this.deletePayment(id);
       this.fetchPayments();
       this.paymentsList = this.paymentsList.filter(
         (payment) => payment._id !== id
@@ -89,8 +89,6 @@ export default {
           payment_amount: Number(data.paymentAmount),
         },
       };
-
-      console.log(data);
 
       if (payment.payload.payment_amount && payment.payload.date) {
         this.updatePayment(payment);
